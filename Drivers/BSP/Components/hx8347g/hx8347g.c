@@ -2,13 +2,13 @@
   ******************************************************************************
   * @file    hx8347g.c
   * @author  MCD Application Team
-  * @version V1.0.1
-  * @date    02-December-2014
+  * @version V1.1.0
+  * @date    10-February-2015
   * @brief   This file includes the LCD driver for HX8347G LCD.
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; COPYRIGHT(c) 2014 STMicroelectronics</center></h2>
+  * <h2><center>&copy; COPYRIGHT(c) 2015 STMicroelectronics</center></h2>
   *
   * Redistribution and use in source and binary forms, with or without modification,
   * are permitted provided that the following conditions are met:
@@ -300,7 +300,7 @@ void hx8347g_WritePixel(uint16_t Xpos, uint16_t Ypos, uint16_t RGBCode)
   LCD_IO_WriteReg(LCD_REG_34);
 
   /* Write 16-bit GRAM Reg */
-  LCD_IO_WriteData((uint8_t*)&RGBCode, 2);
+  LCD_IO_WriteMultipleData((uint8_t*)&RGBCode, 2);
 }
 
 /**
@@ -331,7 +331,7 @@ void hx8347g_WriteReg(uint8_t LCDReg, uint16_t LCDRegValue)
   LCD_IO_WriteReg(LCDReg);
   
   /* Write 16-bit GRAM Reg */
-  LCD_IO_WriteData((uint8_t*)&LCDRegValue, 2);
+  LCD_IO_WriteMultipleData((uint8_t*)&LCDRegValue, 2);
 }
 
 /**
@@ -396,7 +396,7 @@ void hx8347g_DrawHLine(uint16_t RGBCode, uint16_t Xpos, uint16_t Ypos, uint16_t 
     ArrayRGB[i] = RGBCode;
   }  
 
-  LCD_IO_WriteData((uint8_t*)&ArrayRGB[0], Length * 2);
+  LCD_IO_WriteMultipleData((uint8_t*)&ArrayRGB[0], Length * 2);
 }
 
 /**
@@ -424,7 +424,7 @@ void hx8347g_DrawVLine(uint16_t RGBCode, uint16_t Xpos, uint16_t Ypos, uint16_t 
   }
   
   /* Write 16-bit GRAM Reg */
-  LCD_IO_WriteData((uint8_t*)&ArrayRGB[0], Length * 2);
+  LCD_IO_WriteMultipleData((uint8_t*)&ArrayRGB[0], Length * 2);
 }
 
 /**
@@ -455,7 +455,7 @@ void hx8347g_DrawBitmap(uint16_t Xpos, uint16_t Ypos, uint8_t *pbmp)
   /* Prepare to write GRAM */
   LCD_IO_WriteReg(LCD_REG_34);
  
-  LCD_IO_WriteData((uint8_t*)pbmp, size*2);
+  LCD_IO_WriteMultipleData((uint8_t*)pbmp, size*2);
  
   /* Set GRAM write direction and BGR = 0 */
   /* Memory access control: MY = 1, MX = 1, MV = 1, ML = 0 */
