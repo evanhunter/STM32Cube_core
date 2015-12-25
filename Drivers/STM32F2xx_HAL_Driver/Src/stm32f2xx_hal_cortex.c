@@ -2,8 +2,8 @@
   ******************************************************************************
   * @file    stm32f2xx_hal_cortex.c
   * @author  MCD Application Team
-  * @version V1.1.1
-  * @date    20-November-2015
+  * @version V1.1.2
+  * @date    11-December-2015
   * @brief   CORTEX HAL module driver.
   *          This file provides firmware functions to manage the following 
   *          functionalities of the CORTEX:

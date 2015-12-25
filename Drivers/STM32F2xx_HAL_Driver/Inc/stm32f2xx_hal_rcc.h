@@ -2,8 +2,8 @@
   ******************************************************************************
   * @file    stm32f2xx_hal_rcc.h
   * @author  MCD Application Team
-  * @version V1.1.1
-  * @date    20-November-2015
+  * @version V1.1.2
+  * @date    11-December-2015
   * @brief   Header file of RCC HAL module.
   ******************************************************************************
   * @attention
@@ -922,7 +922,7 @@ typedef struct
 #define __HAL_RCC_PWR_IS_CLK_DISABLED()    ((RCC->APB1ENR &(RCC_APB1ENR_PWREN))== RESET)
 #define __HAL_RCC_CAN1_IS_CLK_DISABLED()   ((RCC->APB1ENR &(RCC_APB1ENR_CAN1EN))== RESET)
 #define __HAL_RCC_CAN2_IS_CLK_DISABLED()   ((RCC->APB1ENR &(RCC_APB1ENR_CAN2EN))== RESET)
-#define __HAL_RCC_DAC_IS_CLK_DISABLED()    ((RCC->APB1ENR &(RCC_APB1ENR_DACEN))== RESET))
+#define __HAL_RCC_DAC_IS_CLK_DISABLED()    ((RCC->APB1ENR &(RCC_APB1ENR_DACEN))== RESET)
 /**
   * @}
   */

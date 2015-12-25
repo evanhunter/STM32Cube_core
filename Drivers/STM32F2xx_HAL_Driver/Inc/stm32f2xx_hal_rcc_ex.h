@@ -2,8 +2,8 @@
   ******************************************************************************
   * @file    stm32f2xx_hal_rcc_ex.h
   * @author  MCD Application Team
-  * @version V1.1.1
-  * @date    20-November-2015
+  * @version V1.1.2
+  * @date    11-December-2015
   * @brief   Header file of RCC HAL Extension module.
   ******************************************************************************
   * @attention
@@ -270,8 +270,8 @@ typedef struct
 #define __HAL_RCC_CRYP_IS_CLK_ENABLED()  ((RCC->AHB2ENR &(RCC_AHB2ENR_CRYPEN))!= RESET)
 #define __HAL_RCC_HASH_IS_CLK_ENABLED()  ((RCC->AHB2ENR &(RCC_AHB2ENR_HASHEN))!= RESET)
 
-#define __HAL_RCC_CRYP_IS_CLK_DISABLED()  (RCC->AHB2ENR &(RCC_AHB2ENR_CRYPEN))== RESET)
-#define __HAL_RCC_HASH_IS_CLK_DISABLED()  (RCC->AHB2ENR &(RCC_AHB2ENR_HASHEN))== RESET)
+#define __HAL_RCC_CRYP_IS_CLK_DISABLED()  ((RCC->AHB2ENR &(RCC_AHB2ENR_CRYPEN))== RESET)
+#define __HAL_RCC_HASH_IS_CLK_DISABLED()  ((RCC->AHB2ENR &(RCC_AHB2ENR_HASHEN))== RESET)
 #endif /* defined(STM32F215xx) || defined(STM32F217xx) */
 /**
   * @}

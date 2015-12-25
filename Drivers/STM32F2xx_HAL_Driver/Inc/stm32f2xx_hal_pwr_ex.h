@@ -2,8 +2,8 @@
   ******************************************************************************
   * @file    stm32f2xx_hal_pwr_ex.h
   * @author  MCD Application Team
-  * @version V1.1.1
-  * @date    20-November-2015
+  * @version V1.1.2
+  * @date    11-December-2015
   * @brief   Header file of PWR HAL Extension module.
   ******************************************************************************
   * @attention

@@ -2,8 +2,8 @@
   ******************************************************************************
   * @file    stm32f2xx_hal.c
   * @author  MCD Application Team
-  * @version V1.1.1
-  * @date    20-November-2015
+  * @version V1.1.2
+  * @date    11-December-2015
   * @brief   HAL module driver.
   *          This is the common part of the HAL initialization
   *
@@ -68,17 +68,17 @@
   * @{
   */
 /**
-  * @brief STM32F2xx HAL Driver version number V1.1.1
+  * @brief STM32F2xx HAL Driver version number V1.1.2
   */
 #define __STM32F2xx_HAL_VERSION_MAIN   (0x01) /*!< [31:24] main version */
 #define __STM32F2xx_HAL_VERSION_SUB1   (0x01) /*!< [23:16] sub1 version */
-#define __STM32F2xx_HAL_VERSION_SUB2   (0x01) /*!< [15:8]  sub2 version */
-#define __STM32F2xx_HAL_VERSION_RC     (0x00) /*!< [7:0]  release candidate */ 
+#define __STM32F2xx_HAL_VERSION_SUB2   (0x02) /*!< [15:8]  sub2 version */
+#define __STM32F2xx_HAL_VERSION_RC     (0x00) /*!< [7:0]  release candidate */
 #define __STM32F2xx_HAL_VERSION         ((__STM32F2xx_HAL_VERSION_MAIN << 24)\
                                         |(__STM32F2xx_HAL_VERSION_SUB1 << 16)\
                                         |(__STM32F2xx_HAL_VERSION_SUB2 << 8 )\
                                         |(__STM32F2xx_HAL_VERSION_RC))
-                                        
+
 #define IDCODE_DEVID_MASK    ((uint32_t)0x00000FFF)
 
 /* ------------ RCC registers bit address in the alias region ----------- */
