@@ -2,8 +2,8 @@
   ******************************************************************************
   * @file    stm32f7xx_hal_nor.c
   * @author  MCD Application Team
-  * @version V1.0.3
-  * @date    13-November-2015
+  * @version V1.0.4
+  * @date    09-December-2015
   * @brief   NOR HAL module driver.
   *          This file provides a generic firmware to drive NOR memories mounted 
   *          as external device.
@@ -266,6 +266,7 @@ __weak void HAL_NOR_MspWait(NOR_HandleTypeDef *hnor, uint32_t Timeout)
 {
   /* Prevent unused argument(s) compilation warning */
   UNUSED(hnor);
+  UNUSED(Timeout);
   
   /* NOTE : This function Should not be modified, when the callback is needed,
             the HAL_NOR_MspWait could be implemented in the user file

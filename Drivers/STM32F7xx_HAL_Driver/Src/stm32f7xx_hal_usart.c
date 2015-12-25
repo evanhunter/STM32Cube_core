@@ -2,8 +2,8 @@
   ******************************************************************************
   * @file    stm32f7xx_hal_usart.c
   * @author  MCD Application Team
-  * @version V1.0.3
-  * @date    13-November-2015
+  * @version V1.0.4
+  * @date    09-December-2015
   * @brief   USART HAL module driver.
   *          This file provides firmware functions to manage the following 
   *          functionalities of the Universal Synchronous/Asynchronous Receiver Transmitter
@@ -100,8 +100,6 @@
   */
 #define DUMMY_DATA                             ((uint16_t) 0xFFFF)
 #define TEACK_REACK_TIMEOUT                    ((uint32_t) 1000)
-#define USART_TXDMA_TIMEOUTVALUE            22000
-#define USART_TIMEOUT_VALUE                 22000
 #define USART_CR1_FIELDS  ((uint32_t)(USART_CR1_M | USART_CR1_PCE | USART_CR1_PS | \
                                      USART_CR1_TE | USART_CR1_RE  | USART_CR1_OVER8))
 #define USART_CR2_FIELDS       ((uint32_t)(USART_CR2_CPHA | USART_CR2_CPOL | \
