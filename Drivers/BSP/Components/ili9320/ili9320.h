@@ -1,10 +1,10 @@
 /**
   ******************************************************************************
-  * @file    ili9325.h
+  * @file    ili9320.h
   * @author  MCD Application Team
   * @version V1.2.2
   * @date    02-December-2014
-  * @brief   This file contains all the functions prototypes for the ili9325.c
+  * @brief   This file contains all the functions prototypes for the ili9320.c
   *          driver.
   ******************************************************************************
   * @attention
@@ -37,8 +37,8 @@
   */ 
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __ILI9325_H
-#define __ILI9325_H
+#ifndef __ILI9320_H
+#define __ILI9320_H
 
 #ifdef __cplusplus
  extern "C" {
@@ -55,11 +55,11 @@
   * @{
   */ 
   
-/** @addtogroup ili9325
+/** @addtogroup ili9320
   * @{
   */
 
-/** @defgroup ILI9325_Exported_Types
+/** @defgroup ILI9320_Exported_Types
   * @{
   */
    
@@ -67,22 +67,22 @@
   * @}
   */ 
 
-/** @defgroup ILI9325_Exported_Constants
+/** @defgroup ILI9320_Exported_Constants
   * @{
   */
 /** 
-  * @brief  ILI9325 ID  
+  * @brief  ILI9320 ID  
   */  
-#define  ILI9325_ID    0x9325
+#define  ILI9320_ID    0x9320
    
 /** 
-  * @brief  ILI9325 Size  
+  * @brief  ILI9320 Size  
   */  
-#define  ILI9325_LCD_PIXEL_WIDTH    ((uint16_t)320)
-#define  ILI9325_LCD_PIXEL_HEIGHT   ((uint16_t)240)
+#define  ILI9320_LCD_PIXEL_WIDTH    ((uint16_t)320)
+#define  ILI9320_LCD_PIXEL_HEIGHT   ((uint16_t)240)
    
 /** 
-  * @brief  ILI9325 Registers  
+  * @brief  ILI9320 Registers  
   */ 
 #define LCD_REG_0             0x00
 #define LCD_REG_1             0x01
@@ -197,33 +197,33 @@
   * @}
   */
   
-/** @defgroup ILI9325_Exported_Functions
+/** @defgroup ILI9320_Exported_Functions
   * @{
   */ 
-void     ili9325_Init(void);
-uint16_t ili9325_ReadID(void);
-void     ili9325_WriteReg(uint8_t LCDReg, uint16_t LCDRegValue);
-uint16_t ili9325_ReadReg(uint8_t LCDReg);
+void     ili9320_Init(void);
+uint16_t ili9320_ReadID(void);
+void     ili9320_WriteReg(uint8_t LCDReg, uint16_t LCDRegValue);
+uint16_t ili9320_ReadReg(uint8_t LCDReg);
 
-void     ili9325_DisplayOn(void);
-void     ili9325_DisplayOff(void);
-void     ili9325_SetCursor(uint16_t Xpos, uint16_t Ypos);
-void     ili9325_WritePixel(uint16_t Xpos, uint16_t Ypos, uint16_t RGBCode);
-uint16_t ili9325_ReadPixel(uint16_t Xpos, uint16_t Ypos);
+void     ili9320_DisplayOn(void);
+void     ili9320_DisplayOff(void);
+void     ili9320_SetCursor(uint16_t Xpos, uint16_t Ypos);
+void     ili9320_WritePixel(uint16_t Xpos, uint16_t Ypos, uint16_t RGB_Code);
+uint16_t ili9320_ReadPixel(uint16_t Xpos, uint16_t Ypos);
 
-void     ili9325_DrawHLine(uint16_t RGBCode, uint16_t Xpos, uint16_t Ypos, uint16_t Length);
-void     ili9325_DrawVLine(uint16_t RGBCode, uint16_t Xpos, uint16_t Ypos, uint16_t Length);
-void     ili9325_DrawBitmap(uint16_t Xpos, uint16_t Ypos, uint8_t *pbmp);
-void     ili9325_DrawRGBImage(uint16_t Xpos, uint16_t Ypos, uint16_t Xsize, uint16_t Ysize, uint8_t *pdata);
+void     ili9320_DrawHLine(uint16_t RGBCode, uint16_t Xpos, uint16_t Ypos, uint16_t Length);
+void     ili9320_DrawVLine(uint16_t RGBCode, uint16_t Xpos, uint16_t Ypos, uint16_t Length);
+void     ili9320_DrawBitmap(uint16_t Xpos, uint16_t Ypos, uint8_t *pbmp);
+void     ili9320_DrawRGBImage(uint16_t Xpos, uint16_t Ypos, uint16_t Xsize, uint16_t Ysize, uint8_t *pdata);
 
-void     ili9325_SetDisplayWindow(uint16_t Xpos, uint16_t Ypos, uint16_t Width, uint16_t Height);
+void     ili9320_SetDisplayWindow(uint16_t Xpos, uint16_t Ypos, uint16_t Width, uint16_t Height);
 
 
-uint16_t ili9325_GetLcdPixelWidth(void);
-uint16_t ili9325_GetLcdPixelHeight(void);
+uint16_t ili9320_GetLcdPixelWidth(void);
+uint16_t ili9320_GetLcdPixelHeight(void);
 
 /* LCD driver structure */
-extern LCD_DrvTypeDef   ili9325_drv;
+extern LCD_DrvTypeDef   ili9320_drv;
 
 /* LCD IO functions */
 void     LCD_IO_Init(void);
@@ -239,7 +239,7 @@ uint16_t LCD_IO_ReadData(uint16_t Reg);
 }
 #endif
 
-#endif /* __ILI9325_H */
+#endif /* __ILI9320_H */
 
 /**
   * @}
